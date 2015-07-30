@@ -6,7 +6,7 @@ from subprocess import check_call
 
 print "hello from appveyor.helper.py"
 
-build = os.environ['BUILD']
+#build = os.environ['BUILD']
 config = os.environ['CONFIG']
 path = os.environ['PATH']
 cmake_command = ['cmake', '-DFMT_PEDANTIC=ON', '-DCMAKE_BUILD_TYPE=' + config]
