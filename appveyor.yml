@@ -1,21 +1,8 @@
 environment:
+	CTEST_OUTPUT_ON_FAILURE: 1
   matrix:
-    - GENERATOR: "Visual Studio 14"
-      CONFIG: Debug
-
-    - GENERATOR: "Visual Studio 14"
-      CONFIG: Release
-
-    - GENERATOR: "Visual Studio 14 Win64"
-      CONFIG: Debug
-
-    - GENERATOR: "Visual Studio 14 Win64"
-      CONFIG: Release
+    - BUILD: msvc
+    CONFIG: Debug
 
 build_script:
-  - cmake "-G%GENERATOR%" -H. -B_builds
-  - cmake --build _builds --config "%CONFIG%"
-
-test_script:
-  - ps: cd _builds
-  - ctest -VV -C "%CONFIG%"
+  - python build_system/appveyor.helper.py
