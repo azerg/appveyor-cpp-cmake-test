@@ -1,7 +1,7 @@
 environment:
   matrix:
-    - BUILD: msvc
-    CONFIG: Debug
+     - GENERATOR: "Visual Studio 14"
+       CONFIG: Debug
 
 build_script:
   - python build_system/appveyor.helper.py

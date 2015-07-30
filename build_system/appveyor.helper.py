@@ -4,6 +4,8 @@
 import os
 from subprocess import check_call
 
+message("hello from appveyor.helper.py")
+
 build = os.environ['BUILD']
 config = os.environ['CONFIG']
 path = os.environ['PATH']
