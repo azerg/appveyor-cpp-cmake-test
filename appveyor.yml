@@ -6,4 +6,7 @@ environment:
        CONFIG: Release
 
 build_script:
-  - python build_system/appveyor.helper.py
+  - python build_system/appveyor.helper.py 
+
+ matrix:
+  fast_finish: true
